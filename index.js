@@ -157,7 +157,7 @@ ${(unfunded > 0) ? ("Currently, " + unfunded + " remains unfunded. We need your 
 // create a new DOM element containing the template string and append it to the description container
 let displayEle = document.createElement("p");
 displayEle.innerHTML = `${displayStr}`;
-descriptionContainer.appendChild(display);
+descriptionContainer.appendChild(displayEle);
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
@@ -172,7 +172,14 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstG, secondG, ...rest] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const firstGNameEle = document.createElement("p");
+firstGNameEle.innerHTML = `${firstG.name}`;
+firstGameContainer.appendChild(firstGNameEle);
 
 // do the same for the runner up item
+const secondGNameEle = document.createElement("p");
+secondGNameEle.innerHTML = `${secondG.name}`;
+secondGameContainer.appendChild(secondGNameEle);
