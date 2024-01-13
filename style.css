@@ -19,9 +19,40 @@ body {
     margin-top: -10px;
 }
 
+.divider {
+    background-color: lightblue;
+    padding: 0.2%;
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.section {
+    color: azure;
+}
+
+#background-container > h2 {
+    display: flex;
+    justify-content: center;
+}
+#description-container > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#statistic-container {
+    color: azure;
+}
+#statistic-container > h2 {
+    display: flex;
+    justify-content: center;
+}
 .stats-container {
     display: flex;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 .stats-container:hover {
     box-shadow: 0 0 30px;
@@ -41,6 +72,10 @@ body {
     font-size: 50px;
 }
 
+#our-game-container > h2, p {
+    display: flex;
+    justify-content: center;
+}
 #games-container {
     display: flex;
     flex-wrap: wrap;
